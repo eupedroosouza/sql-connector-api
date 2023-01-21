@@ -1,4 +1,5 @@
 # SQL Connector Api
+[![](https://jitpack.io/v/eupedroosouza/sql-connector-api.svg)](https://jitpack.io/#eupedroosouza/sql-connector-api)
 
 Simple SQL Connector API using HikariCP.
 
