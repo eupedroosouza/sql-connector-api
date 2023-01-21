@@ -216,6 +216,15 @@ public class SQLConnector implements HikariConfigMXBean {
     }
 
     /**
+     * Close the Hikari Data Source.
+     */
+    public void close(){
+        if(dataSource == null)
+            throw new NullPointerException("DataSource is null.");
+        dataSource.close();
+    }
+
+    /**
      * Get the JDBC Connection (The pool must be started first with {@link #connect()})
      * @return JDBC Connection
      * @throws SQLException

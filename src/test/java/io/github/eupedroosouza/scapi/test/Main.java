@@ -62,6 +62,8 @@ public class Main {
             }
         }
 
+        sqlConnector.close();
+
         System.out.println("Finish, thank you!");
     }
 }
