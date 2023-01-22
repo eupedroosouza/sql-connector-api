@@ -49,19 +49,25 @@
                         <goals>
                             <goal>shade</goal>
                         </goals>
+                        <configuration>
+                            <filters>
+                                <filter>
+                                    <artifact>com.zaxxer:HikariCP</artifact>
+                                    <excludes>
+                                        <exclude>META-INF/MANIFEST.MF</exclude>
+                                    </excludes>
+                                </filter>
+                                <filter>
+                                    <artifact>org.slf4j:slf4j-api</artifact>
+                                    <excludes>
+                                        <exclude>META-INF/MANIFEST.MF</exclude>
+                                    </excludes>
+                                </filter>
+                            </filters>
+
+                        </configuration>
                     </execution>
                 </executions>
-                <configuration>
-                    <filters>
-                        <filter>
-                            <artifact>com.zaxxer:HikariCP</artifact>
-                            <excludes>
-                                <exclude>META-INF/MANIFEST.MF</exclude>
-                            </excludes>
-                        </filter>
-                    </filters>
-                </configuration>
-
             </plugin>
         </plugins>
     </build>
